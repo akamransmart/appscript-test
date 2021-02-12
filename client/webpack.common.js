@@ -15,7 +15,7 @@ module.exports = {
         use: [
           {
             // Adds CSS to the DOM by injecting a `<style>` tag
-            loader: 'style-loader'
+            loader: 'vue-style-loader'
           },
           {
             // Interprets `@import` and `url()` like `import/require()` and will resolve them
@@ -37,6 +37,10 @@ module.exports = {
             loader: 'sass-loader'
           }
         ]
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-plain-loader'
       },
       {
         test: /\.vue$/,

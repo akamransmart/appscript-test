@@ -1,44 +1,26 @@
-<template>
-<div>
-	<h1>Home</h1>
-	<h3>Random Numbers</h3>
-	<ul>
-		<li v-for="num in numbers">{{num}}</li>
-	</ul>
-	
-</div>
+<template lang="pug">
+  .awesome-class
+    h1 Hello World!
 </template>
 <script>
 import BackEndWrapper from '../services/BackEndWrapper';
-export default 
-{
+export default {
   name: 'Home',
-  data(){
+  data() {
   	return ({
   		bw:new BackEndWrapper(),
   		numbers:[]
   	});
   },
-  mounted()
-  {
-      this.loadRequests();
+  mounted() {
   },
-  methods:
-  {
-  	loadRequests()
-  	{
-	  	this.bw.getRandomNumbers().then(function(res)
-	  	{
-	  		this.numbers = res;
-	  	}.bind(this), 
-	  	function(err)
-        {
-          //this.showError();
+  methods: {
 
-        }.bind(this));	
-  	}
-  	
   }
-  
 }
 </script>
+<style lang="scss" scoped>
+  .awesome-class {
+    background: red;
+  }
+</style>
