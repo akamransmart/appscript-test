@@ -8,7 +8,7 @@
     "build": "webpack --config ./client/webpack.dev.js ",
     "local": "webpack-dev-server --config ./client/webpack.dev.js --open",
     "prod": "webpack --config ./client/webpack.prod.js ",
-    "deploy": "npm run prod &&  npm run gas && cd deploy/gas && rm app.bundle.js && clasp push && clasp open --webapp"
+    "deploy": "npm run prod &&  npm run gas && cd deploy/gas && rm app.bundle.js && clasp push"
   },
   "keywords": [],
   "author": "",
