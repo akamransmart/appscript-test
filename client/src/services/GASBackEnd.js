@@ -6,8 +6,7 @@ class GASBackEnd
 	{
 
 	}
-	getRandomNumbers()
-	{
+	addSIO() {
 		return new Promise(function(resolve,reject) 
 		{
 			google.script.run.withSuccessHandler(function(res)
@@ -17,11 +16,9 @@ class GASBackEnd
 			.withFailureHandler(function()
 			{
 				reject();
-			}).getRandomNumbers();
+			}).addSIO();
 		});
 	}
-	
-
 }
 
 export default GASBackEnd;

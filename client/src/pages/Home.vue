@@ -1,6 +1,6 @@
 <template lang="pug">
   .awesome-class
-    h1 Hello World!
+    button(@click="addSIO")
     h2 This is a test of the addon!
 </template>
 <script>
@@ -14,9 +14,12 @@ export default {
   	});
   },
   mounted() {
+
   },
   methods: {
-
+    addSIO() {
+      this.bw.addSIO()
+    }
   }
 }
 </script>

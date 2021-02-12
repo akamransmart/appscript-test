@@ -16,9 +16,9 @@ class BackEndWrapper
 		}
 	}
 
-	getRandomNumbers()
+	addSIO()
 	{
-		return this.real.getRandomNumbers();
+		return this.real.addSIO();
 	}
 	
 };
